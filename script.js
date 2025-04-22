@@ -1,53 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Funksionaliteti i ndërprerjes së tab-ve
-  const tablinks = document.querySelectorAll('.tablink');
+  // Tab switching functionality
+  const tabLinks = document.querySelectorAll('.tablink');
   const tabContents = document.querySelectorAll('.tab-content');
 
-  tablinks.forEach(button => {
-    button.addEventListener('click', () => {
-      tablinks.forEach(btn => btn.classList.remove('active'));
+  tabLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      tabLinks.forEach(btn => btn.classList.remove('active'));
       tabContents.forEach(content => content.classList.remove('active'));
-      button.classList.add('active');
-      const tabId = button.getAttribute('data-tab');
+      
+      link.classList.add('active');
+      const tabId = link.getAttribute('data-tab');
       document.getElementById(tabId).classList.add('active');
     });
   });
 
-  // Modal logjika për visual search
-  const modal = document.getElementById('dish-modal');
-  const modalImg = document.getElementById('modal-image');
-  const modalDesc = document.getElementById('modal-description');
+  // Modal functionality for "See More" buttons
+  const modal = document.getElementById('modal');
+  const modalImage = document.getElementById('modal-image');
+  const modalDescription = document.getElementById('modal-description');
   const modalClose = document.querySelector('.modal-close');
 
-  // Butonët "See More"
-  const seeMoreButtons = document.querySelectorAll('.see-more');
-
-  seeMoreButtons.forEach(button => {
-    button.addEventListener('click', (event) => {
-      event.stopPropagation();
-      const listItem = button.closest('li');
-      openModal(listItem);
+  document.querySelectorAll('.see-more').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const parentLi = btn.closest('li');
+      const imgSrc = parentLi.getAttribute('data-img');
+      const desc = parentLi.getAttribute('data-desc');
+      modalImage.src = imgSrc;
+      modalDescription.textContent = desc;
+      modal.style.display = 'flex';
     });
   });
-
-  // Gjithashtu lejojmë klikimin e të gjithë dish-item-it
-  const dishItems = document.querySelectorAll('.dish-item');
-  dishItems.forEach(item => {
-    item.addEventListener('click', (event) => {
-      if (!event.target.classList.contains('see-more')) {
-        const listItem = item.closest('li');
-        openModal(listItem);
-      }
-    });
-  });
-
-  function openModal(listItem) {
-    const imgSrc = listItem.getAttribute('data-img') || 'images/placeholder.jpg';
-    const desc = listItem.getAttribute('data-desc') || 'Përshkrimi i pjatës nuk ka qenë vendosur.';
-    modalImg.src = imgSrc;
-    modalDesc.textContent = desc;
-    modal.style.display = 'block';
-  }
 
   modalClose.addEventListener('click', () => {
     modal.style.display = 'none';
