@@ -1,32 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erjol's Website</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Welcome to Erjol's Website</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BarRestourant &amp; Pizzeria Lido Azzurro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- Header me sfondin e img1 -->
+    <header class="bg-header">
+      <h1>BarRestourant &amp; Pizzeria Lido Azzurro</h1>
+      <div class="header-info">
+        <p>Contact us</p>
+        <p>Hours</p>
+      </div>
     </header>
 
-    <section id="home" class="hero">
-        <h2>Your Tagline Here</h2>
-        <p>This is the hero section where you can add a welcome message.</p>
+    <!-- Hero me sfondin e img2 (foto fillestare me efekt drithërimi) -->
+    <section class="hero bg-hero">
+      <h2 class="hero-text">Benvenuti</h2>
     </section>
 
-    <section id="about">
+    <!-- Tabs Navigation (sticky, në stilin e Ozzo) -->
+    <nav class="tabs">
+      <button class="tablink active" data-tab="cibo">Cibo</button>
+      <button class="tablink" data-tab="dessert">Dessert</button>
+      <button class="tablink" data-tab="bevande">Bevande</button>
+    </nav>
+
+    <!-- Tab Content Container -->
+    <div class="tab-container">
+    
+      <!-- Tab "Cibo" – përfshin disa kategori (shembull: Antipasti, Primi Piatti, etj.) -->
+      <div id="cibo" class="tab-content active">
+        <!-- SHEMBULL: Antipasti (përdorni të njëjtën strukturë për të gjitha kategoritë sipas dëshirës) -->
+        <div class="sub-section">
+          <h3>Antipasti</h3>
+          <ul>
+            <!-- Për çdo pjatë vendosni përkatësisht lidhjen e fotos (data-img) dhe përshkrimin (data-desc) -->
+            <li data-img="images/focaccia_bianca.jpg" data-desc="Focaccia bianca: e butë, e shijshme, e bërë me përbërës të freskët.">
+              <div class="dish-item">
+                <!-- Nëse keni një version të vogël të fotos, mund të vendosni një <img>. Për këtë shembull përdorim një placeholder -->
+                <img class="dish-thumb" src="images/focaccia_bianca.jpg" alt="Focaccia bianca">
+                <span class="dish-text">Focaccia bianca - 4.00€</span>
+                <button class="see-more">See More</button>
+              </div>
+            </li>
+            <li data-img="images/focaccia_rossa.jpg" data-desc="Focaccia rossa: aromatike, me domate dhe origano.">
+              <div class="dish-item">
+                <img class="dish-thumb" src="images/focaccia_rossa.jpg" alt="Focaccia rossa">
+                <span class="dish-text">Focaccia rossa - 4.50€</span>
+                <button class="see-more">See More</button>
+              </div>
+            </li>
+            <!-- Vazhdoni me të tjera si: Caprese, Prosciutto crudo e melone, etj. -->
+            <li data-img="images/caprese.jpg" data-desc="Caprese: një kombinim i thjeshtë dhe të freskët të domateve, mozzarella-s, dhe borzilokut.">
+              <div class="dish-item">
+                <img class="dish-thumb" src="images/caprese.jpg" alt="Caprese">
+                <span class="dish-text">Caprese - 10€</span>
+                <button class="see-more">See More</button>
+              </div>
+            </li>
+            <!-- Përgjigjuni formatit për të gjitha pjatat e kategorisë -->
+          </ul>
+        </div>
+        <!-- Tani shtoni edhe nënseksionet tjera sipas menusë: Primi Piatti, Secondi Pesce, Secondi Carne, etj. (mund ta kopjoni strukturën e sipërme) -->
+      </div>
+      
+      <!-- Tab "Dessert" – përfshin "Dessert e Frutta" me të njëjtin stil, por me tekste të rritur -->
+      <div id="dessert" class="tab-content">
+        <h2>Dessert e Frutta</h2>
+        <ul>
+          <li data-img="images/crema_al_caffe.jpg" data-desc="Crema al caffe: e ëmbël, kremoz dhe aromatike.">
+            <div class="dish-item">
+              <img class="dish-thumb" src="images/crema_al_caffe.jpg" alt="Crema al caffe">
+              <span class="dish-text">Crema al caffe - 4.00€</span>
+              <button class="see-more">See More</button>
+            </div>
+          </li>
+          <li data-img="images/tiramisu.jpg" data-desc="Tiramisu: tradicionale, me shije të theksuar të kafesë dhe kakao.">
+            <div class="dish-item">
+              <img class="dish-thumb" src="images/tiramisu.jpg" alt="Tiramisu">
+              <span class="dish-text">Tiramisu - 5.00€</span>
+              <button class="see-more">See More</button>
+            </div>
+          </li>
+          <!-- Vazhdoni për të gjitha ndër pjatat tjetër -->
+        </ul>
+      </div>
+      
+      <!-- Tab "Bevande" – përfshin BEVANDE VINI SFUSI me nënseksione (p.sh. Vini Rossi, Vini Bianchi, etj.) -->
+      <div id="bevande" class="tab-content">
+        <h2>BEVANDE VINI SFUSI</h2>
+        
+        <div class="sub-section">
+          <h3>Vini Rossi</h3>
+          <ul>
+            <li data-img="images/ca_dei_frati.jpg" data-desc="CA DEI FRATI RONCHEDONE: verë e pasur, ideale për mrekullitë e kuqe.">
+              <div class="dish-item">
+                <img class="dish-thumb" src="images/ca_dei_frati.jpg" alt="CA DEI FRATI RONCHEDONE">
+                <span class="dish-text">CA DEI FRATI RONCHEDONE - 35€</span>
+                <button class="see-more">See More</button>
+              </div>
+            </li>
+            <!-- Vazhdoni me të tjera në këtë nënseksion -->
+          </ul>
+        </div>
+        <!-- Shtoni edhe nënseksionet: Vini Bianchi, Vini Rosé, Prosecco e Bollicine, me të njëjtën strukturë -->
+      </div>
+    </div>
+    
+    <!-- Modal për visual search (shfaq foton më të madhe dhe përshkrimin) -->
+    <div id="dish-modal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <img id="modal-image" src="" alt="Dish Image">
+        <div id="modal-description"></div>
+      </div>
+    </div>
+    
+    <!-- Footer me sfondin e img12 -->
+    <footer class="bg-footer">
+      <p>Coperto 2.00€ - &copy; 2025 BarRestourant &amp; Pizzeria Lido Azzurro</p>
+    </footer>
+  </body>
+</html>
+
         <h2>About Us</h2>
         <p>Add information about your business or yourself here.</p>
     </section>
