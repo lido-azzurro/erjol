@@ -1,239 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Global Styles */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #87CEFA; /* Light Sky Blue – bojqielli e hapur */
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background: #f7f7f7;
   color: #333;
 }
 
-/* HEADER – sfondi nga img1 */
-.bg-header {
-  background-image: url('https://raw.githubusercontent.com/Erjol-0/erjol-0.github.io/main/img1.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 40px 20px;
-  text-align: center;
+/* Header */
+.header {
+  background: #333;
   color: #fff;
-  position: relative;
+  text-align: center;
+  padding: 20px;
 }
-
-.bg-header h1 {
-  font-size: 36px;
-  text-transform: uppercase;
+.header-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
   margin-bottom: 10px;
 }
 
-.header-info {
-  font-size: 16px;
-}
-
-/* HERO – sfondi nga img2 */
-.bg-hero {
-  background-image: url('https://raw.githubusercontent.com/Erjol-0/erjol-0.github.io/main/img2.jpg');
+/* Hero Section */
+.hero {
   background-size: cover;
   background-position: center;
-  padding: 80px 20px;
-  text-align: center;
   color: #fff;
-}
-
-.hero-text {
-  font-size: 72px;
-  font-weight: 700;
-}
-
-/* TABS NAVIGATION (sticky) */
-.tabs {
   text-align: center;
-  margin: 20px 0;
+  padding: 80px 20px;
+}
+.hero h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+/* Tabs Navigation */
+.tabs {
+  display: flex;
+  justify-content: center;
+  background: #87CEFA;
+  padding: 10px 0;
   position: sticky;
   top: 0;
-  background-color: #87CEFA;
   z-index: 1000;
-  padding: 10px 0;
 }
-
-.tabs .tablink {
-  background: rgba(255, 255, 255, 0.2);
+.tablink {
+  cursor: pointer;
+  background: transparent;
   border: 2px solid #7ed957;
   color: #7ed957;
   padding: 10px 20px;
   margin: 0 5px;
-  cursor: pointer;
-  font-size: 18px;
+  font-size: 1.1rem;
   text-transform: uppercase;
   transition: background 0.3s ease, color 0.3s ease;
 }
-
-.tabs .tablink.active,
-.tabs .tablink:hover {
+.tablink.active,
+.tablink:hover {
   background: #7ed957;
   color: #fff;
+  border-radius: 5px;
 }
 
-/* TAB CONTENT */
-.tab-container {
-  padding: 20px;
-}
-
+/* Tab Content */
 .tab-content {
   display: none;
-  position: relative;
-  padding: 40px 20px;
-  margin-bottom: 40px;
-  background-color: #87CEFA;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  padding: 20px;
 }
-
 .tab-content.active {
   display: block;
 }
-
-/* SUB-SECTION STYLING */
-.sub-section {
-  margin-bottom: 30px;
-}
-
-.sub-section h3 {
-  margin-bottom: 10px;
-  font-size: 26px;
-  text-decoration: underline;
-}
-
-.sub-section ul {
+.menu-list {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
 }
-
-/* DISH ITEM (për çdo pjatë) */
-.dish-item {
+.menu-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  background: rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
-
-.dish-thumb {
+.menu-item:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.menu-item img {
   width: 60px;
   height: 60px;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 5px;
+  margin-right: 15px;
 }
-
-.dish-text {
+.item-name {
   flex-grow: 1;
-  font-size: inherit;
+  font-size: 1.1rem;
 }
-
-/* Butoni "See More" */
 .see-more {
-  background-color: #7ed957;
+  background: #7ed957;
   color: #fff;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  font-size: 14px;
   border-radius: 4px;
   transition: background 0.3s ease;
 }
-
 .see-more:hover {
-  background-color: #5cbf3e;
+  background: #5cbf3e;
 }
 
-/* Items në secilin listë në "Cibo" */
-.sub-section li {
-  margin-bottom: 10px;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 4px;
-  transition: background 0.3s ease;
-}
-
-.sub-section li:hover {
-  background: rgba(0, 0, 0, 0.6);
-}
-
-/* Për elementet në "Dessert" dhe "Bevande" */
-#dessert ul li,
-#bevande ul li {
-  font-size: 32px;
-  padding: 12px;
-  margin-bottom: 12px;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 4px;
-  transition: background 0.3s ease;
-}
-
-#dessert ul li:hover,
-#bevande ul li:hover {
-  background: rgba(0, 0, 0, 0.6);
-}
-
-/* MODAL për visual search */
+/* Modal */
 .modal {
   display: none;
   position: fixed;
-  z-index: 2000;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.8);
-  padding-top: 60px;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
 }
-
 .modal-content {
-  background-color: #fefefe;
-  margin: auto;
+  background: #fff;
   padding: 20px;
-  border-radius: 4px;
+  border-radius: 5px;
   width: 90%;
   max-width: 600px;
   position: relative;
 }
-
 .modal-content img {
   width: 100%;
-  height: auto;
-  border-radius: 4px;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
-
-#modal-description {
-  margin-top: 15px;
-  font-size: 18px;
-  color: #333;
-}
-
-/* Butoni për mbylljen e modalit */
 .modal-close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 15px;
   cursor: pointer;
+  font-size: 1.5rem;
 }
 
-.modal-close:hover,
-.modal-close:focus {
-  color: black;
-}
-
-/* FOOTER – sfondi nga img12 */
-.bg-footer {
-  background-image: url('https://raw.githubusercontent.com/Erjol-0/erjol-0.github.io/main/img12.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 20px;
-  text-align: center;
+/* Footer */
+.footer {
+  background: #333;
   color: #fff;
-  font-size: 18px;
+  text-align: center;
+  padding: 15px;
 }
