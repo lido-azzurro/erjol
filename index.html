@@ -1,290 +1,191 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BarRestourant &amp; Pizzeria Lido Azzurro</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <title>BarRestourant &amp; Pizzeria Lido Azzurro - Digital Menu</title>
+    <!-- Include fontet dhe stilizimet bazë sipas kodit të Ozzo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Mund ta zëvendësoni me stilin tuaj shtesë nëse do -->
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
   </head>
   <body>
-    <!-- HEADER me sfondin e img1 -->
-    <header class="bg-header">
+    <!-- HEADER: Logo dhe Emri i Biznesit -->
+    <header class="header">
+      <img src="img/logo.png" alt="Logo" class="header-logo" />
       <h1>BarRestourant &amp; Pizzeria Lido Azzurro</h1>
-      <div class="header-info">
-        <p>Contact us</p>
-        <p>Hours</p>
-      </div>
     </header>
 
-    <!-- HERO me sfondin e img2 -->
-    <section class="hero bg-hero">
-      <h2 class="hero-text">Benvenuti</h2>
+    <!-- HERO: Sfondi kryesor me efekt drithërimi -->
+    <section class="hero" style="background-image: url('img/hero.jpg')">
+      <h2>Benvenuti!</h2>
     </section>
 
-    <!-- TABS NAVIGATION (sticky) -->
+    <!-- NAVIGIMI (Tabs) sticky -->
     <nav class="tabs">
-      <button class="tablink active" data-tab="cibo">Cibo</button>
-      <button class="tablink" data-tab="dessert">Dessert</button>
-      <button class="tablink" data-tab="bevande">Bevande</button>
+      <button class="tablink active" data-tab="birre">Birrë</button>
+      <button class="tablink" data-tab="clubsandwich">Club &amp; Sandwich</button>
+      <button class="tablink" data-tab="cocktails">Cocktails</button>
+      <!-- Nëse ke kategori tjera, shto butonat përkatës -->
     </nav>
 
-    <!-- TAB CONTENT CONTAINER -->
-    <div class="tab-container">
-      <!-- TAB "CIBO" -->
-      <div id="cibo" class="tab-content active">
-        <!-- Antipasti -->
-        <div class="sub-section">
-          <h3>Antipasti</h3>
-          <ul>
-            <li data-img="images/focaccia_bianca.jpg" data-desc="Focaccia bianca: e butë, e shijshme, e bërë me përbërës të freskët.">
-              <div class="dish-item">
-                <img class="dish-thumb" src="images/focaccia_bianca.jpg" alt="Focaccia bianca">
-                <span class="dish-text">Focaccia bianca - 4.00€</span>
-                <button class="see-more">See More</button>
-              </div>
-            </li>
-            <li data-img="images/focaccia_rossa.jpg" data-desc="Focaccia rossa: aromatike, me domate dhe origano.">
-              <div class="dish-item">
-                <img class="dish-thumb" src="images/focaccia_rossa.jpg" alt="Focaccia rossa">
-                <span class="dish-text">Focaccia rossa - 4.50€</span>
-                <button class="see-more">See More</button>
-              </div>
-            </li>
-            <li data-img="images/caprese.jpg" data-desc="Caprese: domate, mozzarella dhe borzilok për një përzierje klasike.">
-              <div class="dish-item">
-                <img class="dish-thumb" src="images/caprese.jpg" alt="Caprese">
-                <span class="dish-text">Caprese - 10€</span>
-                <button class="see-more">See More</button>
-              </div>
-            </li>
-            <!-- Vazhdoni me elemente të tjera: prosciutto crudo e melone, Zuppa di Cozze, etj. -->
-          </ul>
-        </div>
-        <!-- Primi Piatti -->
-        <div class="sub-section">
-          <h3>Primi Piatti</h3>
-          <ul>
-            <li data-img="images/spaghetti_aglio_olio.jpg" data-desc="Spaghetti aglio, olio e peperoncino - klasike dhe të shijshme.">
-              <div class="dish-item">
-                <img class="dish-thumb" src="images/spaghetti_aglio_olio.jpg" alt="Spaghetti aglio, olio e peperoncino">
-                <span class="dish-text">Spaghetti aglio, olio e peperoncino - 10€</span>
-                <button class="see-more">See More</button>
-              </div>
-            </li>
-            <!-- Shtoni të gjitha elementet nga Primi Piatti sipas menusë tuaj -->
-          </ul>
-        </div>
-        <!-- Secondi Pesce -->
-        <div class="sub-section">
-          <h3>Secondi Pesce</h3>
-          <ul>
-            <li data-img="images/branzino.jpg" data-desc="Branzino alla Griglia - i freskët dhe i pjekur në mënyrë perfekte.">
-              <div class="dish-item">
-                <img class="dish-thumb" src="images/branzino.jpg" alt="Branzino alla Griglia">
-                <span class="dish-text">Branzino alla Griglia - 18€</span>
-                <button class="see-more">See More</button>
-              </div>
-            </li>
-            <!-- Shtoni të gjitha elementet për Secondi Pesce -->
-          </ul>
-        </div>
-        <!-- Secondi Carne -->
-        <div class="sub-section">
-          <h3>Secondi Carne</h3>
-          <ul>
-            <li data-img="images/roast_beef.jpg" data-desc="Roast beef me rucola dhe Grana - i shijshëm dhe i butë.">
-              <div class="dish-item">
-                <img class="dish-thumb" src="images/roast_beef.jpg" alt="Roast beef">
-                <span class="dish-text">Roast beef rucola e Grana - 12€</span>
-                <button class="see-more">See More</button>
-              </div>
-            </li>
-            <!-- Vazhdoni me të gjitha elementet për Secondi Carne -->
-          </ul>
-        </div>
-        <!-- Contorni -->
-        <div class="sub-section">
-          <h3>Contorni</h3>
-          <ul>
-            <li data-img="images/insalata_mista.jpg" data-desc="Insalata Mista - freskët dhe e thjeshtë.">
-              <div class="dish-item">
-                <img class="dish-thumb" src="images/insalata_mista.jpg" alt="Insalata Mista">
-                <span class="dish-text">Insalata Mista - 4€</span>
-                <button class="see-more">See More</button>
-              </div>
-            </li>
-            <!-- Vazhdoni me Patate Fritte, Verdure alla Griglia, etj. -->
-          </ul>
-        </div>
-        <!-- Insalatone -->
-        <div class="sub-section">
-          <h3>Insalatone</h3>
-          <ul>
-            <li data-img="images/caesar_pollo.jpg" data-desc="Caesar di pollo - me përbërës të freskët.">
-              <div class="dish-item">
-                <img class="dish-thumb" src="images/caesar_pollo.jpg" alt="Caesar di pollo">
-                <span class="dish-text">Caesar di pollo - 11€</span>
-                <button class="see-more">See More</button>
-              </div>
-            </li>
-            <!-- Vazhdoni me elementet e tjera -->
-          </ul>
-        </div>
-        <!-- Panini Gourmet -->
-        <div class="sub-section">
-          <h3>Panini Gourmet</h3>
-          <ul>
-            <li data-img="images/club_sandwich_pollo.jpg" data-desc="Club Sandwich Pollo - me përbërës të zgjedhur me kujdes.">
-              <div class="dish-item">
-                <img class="dish-thumb" src="images/club_sandwich_pollo.jpg" alt="Club Sandwich Pollo">
-                <span class="dish-text">Club Sandwich Pollo - 12€</span>
-                <button class="see-more">See More</button>
-              </div>
-            </li>
-            <!-- Vazhdoni me të gjitha pjatat për Panini Gourmet -->
-          </ul>
-        </div>
-        <!-- Pizze -->
-        <div class="sub-section">
-          <h3>Pizze</h3>
-          <ul>
-            <li data-img="images/focaccia_bianca_pizza.jpg" data-desc="Focaccia bianca: një bazë delikate me olive dhe rosmarino.">
-              <div class="dish-item">
-                <img class="dish-thumb" src="images/focaccia_bianca_pizza.jpg" alt="Focaccia bianca Pizze">
-                <span class="dish-text">Focaccia bianca - 4.00€</span>
-                <button class="see-more">See More</button>
-              </div>
-            </li>
-            <li data-img="images/margherita.jpg" data-desc="Margherita: klasik shqiptar, me domate, mozzarella dhe borzilok.">
-              <div class="dish-item">
-                <img class="dish-thumb" src="images/margherita.jpg" alt="Margherita">
-                <span class="dish-text">Margherita - 7.00€</span>
-                <button class="see-more">See More</button>
-              </div>
-            </li>
-            <!-- Shtoni të gjitha pjatat për Pizze, përfshirë: Marinara, Siciliana, Napoli, Diavola, etj. -->
-          </ul>
-        </div>
-        <!-- Panozzi -->
-        <div class="sub-section">
-          <h3>Panozzi</h3>
-          <ul>
-            <li data-img="images/classico.jpg" data-desc="Classico: të thjeshtë, me një shije tradicionale.">
-              <div class="dish-item">
-                <img class="dish-thumb" src="images/classico.jpg" alt="Panozzi Classico">
-                <span class="dish-text">Classico - 8.00€</span>
-                <button class="see-more">See More</button>
-              </div>
-            </li>
-            <!-- Shtoni Rustico, Vegetariano, Legero -->
-          </ul>
-        </div>
-      </div>
-      
-      <!-- TAB "DESSERT" (Dessert e Frutta) -->
-      <div id="dessert" class="tab-content">
-        <h2>Dessert e Frutta</h2>
-        <ul>
-          <li data-img="images/crema_al_caffe.jpg" data-desc="Crema al caffe: e ëmbël, kremoz dhe aromatike.">
-            <div class="dish-item">
-              <img class="dish-thumb" src="images/crema_al_caffe.jpg" alt="Crema al caffe">
-              <span class="dish-text">Crema al caffe - 4.00€</span>
+    <!-- KONTAINERI I TAB-EVE (Secionet e menusë) -->
+    <div id="tab-container">
+      <!-- Sekcioni Birrë -->
+      <div id="birre" class="tab-content active">
+        <h3>Birrë</h3>
+        <ul class="menu-list">
+          <!-- Produktet këtu janë shembuj. Për shembull: Corona, Jacobinus, San Miguel, etj. -->
+          <li
+            data-img="img/birre/corona.jpg"
+            data-desc="Corona – Refreshing beer. Price: €350"
+          >
+            <div class="menu-item">
+              <img src="img/birre/corona_thumb.jpg" alt="Corona" />
+              <span class="item-name">Corona - €350</span>
               <button class="see-more">See More</button>
             </div>
           </li>
-          <li data-img="images/semifreddo_affogato.jpg" data-desc="Semifreddo Affogato al caffe: freskët dhe aromatike.">
-            <div class="dish-item">
-              <img class="dish-thumb" src="images/semifreddo_affogato.jpg" alt="Semifreddo Affogato">
-              <span class="dish-text">Semifreddo Affogato al caffe - 5.00€</span>
+          <li
+            data-img="img/birre/jacobinus.jpg"
+            data-desc="Jacobinus – A smooth, full-bodied beer. Price: €350"
+          >
+            <div class="menu-item">
+              <img src="img/birre/jacobinus_thumb.jpg" alt="Jacobinus" />
+              <span class="item-name">Jacobinus - €350</span>
               <button class="see-more">See More</button>
             </div>
           </li>
-          <li data-img="images/tiramisu.jpg" data-desc="Tiramisu: tradicionale, me shije të theksuar të kafesë e kakao.">
-            <div class="dish-item">
-              <img class="dish-thumb" src="images/tiramisu.jpg" alt="Tiramisu">
-              <span class="dish-text">Tiramisu - 5.00€</span>
+          <li
+            data-img="img/birre/san_miguel.png"
+            data-desc="San Miguel – A classic choice. Price: €300"
+          >
+            <div class="menu-item">
+              <img src="img/birre/san_miguel_thumb.png" alt="San Miguel" />
+              <span class="item-name">San Miguel - €300</span>
               <button class="see-more">See More</button>
             </div>
           </li>
-          <!-- Vazhdoni me të gjitha pjatat e Desserti -->
+          <!-- Shto të gjithë produktet sipas kodit të menusë tënde për secilin seksion -->
         </ul>
       </div>
-      
-      <!-- TAB "BEVANDE" (BEVANDE VINI SFUSI + nënseksione) -->
-      <div id="bevande" class="tab-content">
-        <h2>BEVANDE VINI SFUSI</h2>
-        
-        <div class="sub-section">
-          <h3>Vini Rossi</h3>
-          <ul>
-            <li data-img="images/ca_dei_frati.jpg" data-desc="CA DEI FRATI RONCHEDONE: i pasur, me aromë e theksuar.">
-              <div class="dish-item">
-                <img class="dish-thumb" src="images/ca_dei_frati.jpg" alt="CA DEI FRATI RONCHEDONE">
-                <span class="dish-text">CA DEI FRATI RONCHEDONE - 35€</span>
-                <button class="see-more">See More</button>
-              </div>
-            </li>
-            <!-- Shtoni të gjitha pjatat për Vini Rossi -->
-          </ul>
-        </div>
-        
-        <div class="sub-section">
-          <h3>Vini Bianchi</h3>
-          <ul>
-            <li data-img="images/pinot_bianco.jpg" data-desc="PINOT BIANCO ALOIS LAGEDER: i freskët, elegant.">
-              <div class="dish-item">
-                <img class="dish-thumb" src="images/pinot_bianco.jpg" alt="PINOT BIANCO ALOIS LAGEDER">
-                <span class="dish-text">PINOT BIANCO ALOIS LAGEDER - 28€</span>
-                <button class="see-more">See More</button>
-              </div>
-            </li>
-            <!-- Vazhdoni me elemente për Vini Bianchi -->
-          </ul>
-        </div>
-        
-        <div class="sub-section">
-          <h3>Vini Rosé</h3>
-          <ul>
-            <li data-img="images/toscana_rose.jpg" data-desc="TOSCANA: i butë dhe me nuanca të qarta.">
-              <div class="dish-item">
-                <img class="dish-thumb" src="images/toscana_rose.jpg" alt="TOSCANA Rosè">
-                <span class="dish-text">TOSCANA - 25€</span>
-                <button class="see-more">See More</button>
-              </div>
-            </li>
-            <!-- Vazhdoni me të gjitha pjatat për Vini Rosè -->
-          </ul>
-        </div>
-        
-        <div class="sub-section">
-          <h3>Prosecco e Bollicine</h3>
-          <ul>
-            <li data-img="images/ferrari_maximum.jpg" data-desc="FERRARI MAXIMUM BRUT: i shkëlqyer për rastet festive.">
-              <div class="dish-item">
-                <img class="dish-thumb" src="images/ferrari_maximum.jpg" alt="FERRARI MAXIMUM BRUT">
-                <span class="dish-text">FERRARI MAXIMUM BRUT - 55€</span>
-                <button class="see-more">See More</button>
-              </div>
-            </li>
-            <!-- Vazhdoni me të gjitha pjatat për Prosecco e Bollicine -->
-          </ul>
-        </div>
+
+      <!-- Sekcioni Club & Sandwich -->
+      <div id="clubsandwich" class="tab-content">
+        <h3>Club &amp; Sandwich</h3>
+        <ul class="menu-list">
+          <li
+            data-img="img/clubsandwich/panine_pule.jpg"
+            data-desc="Panine Pule – Philadelphia, kroketë pule, djathë gouda, djathë i bardhë, domate, kastravec. Price: €350"
+          >
+            <div class="menu-item">
+              <img src="img/clubsandwich/panine_pule_thumb.jpg" alt="Panine Pule" />
+              <span class="item-name">Panine Pule - €350</span>
+              <button class="see-more">See More</button>
+            </div>
+          </li>
+          <li
+            data-img="img/clubsandwich/panine_chilly.jpg"
+            data-desc="Panine Chilly – Majoneze, spianata, djathë gouda, domate. Price: €300"
+          >
+            <div class="menu-item">
+              <img src="img/clubsandwich/panine_chilly_thumb.jpg" alt="Panine Chilly" />
+              <span class="item-name">Panine Chilly - €300</span>
+              <button class="see-more">See More</button>
+            </div>
+          </li>
+          <li
+            data-img="img/clubsandwich/club_sandwich.jpg"
+            data-desc="Club Sandwich – Proshutë pule, gouda, majonezë, domate, sallatë jeshile, patate të skuqura. Price: €380"
+          >
+            <div class="menu-item">
+              <img src="img/clubsandwich/club_sandwich_thumb.jpg" alt="Club Sandwich" />
+              <span class="item-name">Club Sandwich - €380</span>
+              <button class="see-more">See More</button>
+            </div>
+          </li>
+          <!-- Vazhdoni me produktet e tjera sipas menuse suaj -->
+        </ul>
+      </div>
+
+      <!-- Sekcioni Cocktails -->
+      <div id="cocktails" class="tab-content">
+        <h3>Cocktails</h3>
+        <ul class="menu-list">
+          <li
+            data-img="img/cocktails/daiquiri.jpg"
+            data-desc="Daiquiri – A refreshing cocktail with citrus notes. Price: €600"
+          >
+            <div class="menu-item">
+              <img src="img/cocktails/daiquiri_thumb.jpg" alt="Daiquiri" />
+              <span class="item-name">Daiquiri - €600</span>
+              <button class="see-more">See More</button>
+            </div>
+          </li>
+          <li
+            data-img="img/cocktails/whiskey_sour.png"
+            data-desc="Whiskey Sour – A classic cocktail with balanced sourness. Price: €600"
+          >
+            <div class="menu-item">
+              <img src="img/cocktails/whiskey_sour_thumb.png" alt="Whiskey Sour" />
+              <span class="item-name">Whiskey Sour - €600</span>
+              <button class="see-more">See More</button>
+            </div>
+          </li>
+          <li
+            data-img="img/cocktails/prosecco_margarita.jpg"
+            data-desc="Prosecco Margarita – A sparkling twist on the classic margarita. Price: €600"
+          >
+            <div class="menu-item">
+              <img src="img/cocktails/prosecco_margarita_thumb.jpg" alt="Prosecco Margarita" />
+              <span class="item-name">Prosecco Margarita - €600</span>
+              <button class="see-more">See More</button>
+            </div>
+          </li>
+          <li
+            data-img="img/cocktails/moscow_mule.jpg"
+            data-desc="Moscow Mule – A cool cocktail with ginger and lime. Price: €600"
+          >
+            <div class="menu-item">
+              <img src="img/cocktails/moscow_mule_thumb.jpg" alt="Moscow Mule" />
+              <span class="item-name">Moscow Mule - €600</span>
+              <button class="see-more">See More</button>
+            </div>
+          </li>
+          <li
+            data-img="img/cocktails/gin_fizz.jpg"
+            data-desc="Gin Fizz – A light and bubbly cocktail. Price: €600"
+          >
+            <div class="menu-item">
+              <img src="img/cocktails/gin_fizz_thumb.jpg" alt="Gin Fizz" />
+              <span class="item-name">Gin Fizz - €600</span>
+              <button class="see-more">See More</button>
+            </div>
+          </li>
+          <!-- Shto të gjitha koktejlet sipas menuse tënde -->
+        </ul>
       </div>
     </div>
 
-    <!-- MODAL për visual search -->
-    <div id="dish-modal" class="modal">
+    <!-- MODAL për shfaqjen e detajeve të produktit -->
+    <div id="modal" class="modal">
       <div class="modal-content">
         <span class="modal-close">&times;</span>
-        <img id="modal-image" src="" alt="Dish Image">
+        <img id="modal-image" src="" alt="Menu Item" />
         <div id="modal-description"></div>
       </div>
     </div>
 
-    <!-- FOOTER me sfondin e img12 -->
-    <footer class="bg-footer">
-      <p>Coperto 2.00€ - &copy; 2025 BarRestourant &amp; Pizzeria Lido Azzurro</p>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>&copy; 2025 BarRestourant &amp; Pizzeria Lido Azzurro – All Rights Reserved</p>
     </footer>
   </body>
 </html>
