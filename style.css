@@ -13,7 +13,7 @@ body {
   color: #333;
 }
 
-/* HEADER – përdorim img1 */
+/* HEADER – sfondi nga img1 */
 .bg-header {
   background-image: url('https://raw.githubusercontent.com/Erjol-0/erjol-0.github.io/main/img1.jpg');
   background-size: cover;
@@ -34,7 +34,7 @@ body {
   font-size: 16px;
 }
 
-/* HERO – përdorim img2 (foto fillestare) */
+/* HERO – sfondi nga img2 */
 .bg-hero {
   background-image: url('https://raw.githubusercontent.com/Erjol-0/erjol-0.github.io/main/img2.jpg');
   background-size: cover;
@@ -49,7 +49,7 @@ body {
   font-weight: 700;
 }
 
-/* TABS NAVIGATION */
+/* TABS NAVIGATION (sticky) */
 .tabs {
   text-align: center;
   margin: 20px 0;
@@ -97,7 +97,23 @@ body {
   display: block;
 }
 
-/* STILI I DISH ITEM (për çdo pjatë) */
+/* SUB-SECTION STYLING */
+.sub-section {
+  margin-bottom: 30px;
+}
+
+.sub-section h3 {
+  margin-bottom: 10px;
+  font-size: 26px;
+  text-decoration: underline;
+}
+
+.sub-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* DISH ITEM (për çdo pjatë) */
 .dish-item {
   display: flex;
   align-items: center;
@@ -132,23 +148,7 @@ body {
   background-color: #5cbf3e;
 }
 
-/* Stilimi i listave të përmbajtjes */
-.sub-section {
-  margin-bottom: 30px;
-}
-
-.sub-section h3 {
-  margin-bottom: 10px;
-  font-size: 26px;
-  text-decoration: underline;
-}
-
-.sub-section ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-/* Për elementet në "Cibo" */
+/* Items në secilin listë në "Cibo" */
 .sub-section li {
   margin-bottom: 10px;
   padding: 10px;
@@ -161,7 +161,7 @@ body {
   background: rgba(0, 0, 0, 0.6);
 }
 
-/* Për elementet në "Dessert" dhe "Bevande" (rritje e tekstit) */
+/* Për elementet në "Dessert" dhe "Bevande" */
 #dessert ul li,
 #bevande ul li {
   font-size: 32px;
@@ -177,16 +177,16 @@ body {
   background: rgba(0, 0, 0, 0.6);
 }
 
-/* MODAL (për visual search) */
+/* MODAL për visual search */
 .modal {
-  display: none; /* e fshehur fillimisht */
+  display: none;
   position: fixed;
   z-index: 2000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;  /* për përmbajtje më të madhe se ekran */
+  overflow: auto;
   background-color: rgba(0,0,0,0.8);
   padding-top: 60px;
 }
@@ -227,7 +227,7 @@ body {
   color: black;
 }
 
-/* FOOTER – përdorim img12 */
+/* FOOTER – sfondi nga img12 */
 .bg-footer {
   background-image: url('https://raw.githubusercontent.com/Erjol-0/erjol-0.github.io/main/img12.jpg');
   background-size: cover;
