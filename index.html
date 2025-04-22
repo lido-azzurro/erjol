@@ -8,7 +8,7 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <!-- Header me sfondin e img1 -->
+    <!-- HEADER me sfondin e img1 -->
     <header class="bg-header">
       <h1>BarRestourant &amp; Pizzeria Lido Azzurro</h1>
       <div class="header-info">
@@ -17,31 +17,28 @@
       </div>
     </header>
 
-    <!-- Hero me sfondin e img2 (foto fillestare me efekt drithërimi) -->
+    <!-- HERO me sfondin e img2 -->
     <section class="hero bg-hero">
       <h2 class="hero-text">Benvenuti</h2>
     </section>
 
-    <!-- Tabs Navigation (sticky, në stilin e Ozzo) -->
+    <!-- TABS NAVIGATION (sticky) -->
     <nav class="tabs">
       <button class="tablink active" data-tab="cibo">Cibo</button>
       <button class="tablink" data-tab="dessert">Dessert</button>
       <button class="tablink" data-tab="bevande">Bevande</button>
     </nav>
 
-    <!-- Tab Content Container -->
+    <!-- TAB CONTENT CONTAINER -->
     <div class="tab-container">
-    
-      <!-- Tab "Cibo" – përfshin disa kategori (shembull: Antipasti, Primi Piatti, etj.) -->
+      <!-- TAB "CIBO" -->
       <div id="cibo" class="tab-content active">
-        <!-- SHEMBULL: Antipasti (përdorni të njëjtën strukturë për të gjitha kategoritë sipas dëshirës) -->
+        <!-- Antipasti -->
         <div class="sub-section">
           <h3>Antipasti</h3>
           <ul>
-            <!-- Për çdo pjatë vendosni përkatësisht lidhjen e fotos (data-img) dhe përshkrimin (data-desc) -->
             <li data-img="images/focaccia_bianca.jpg" data-desc="Focaccia bianca: e butë, e shijshme, e bërë me përbërës të freskët.">
               <div class="dish-item">
-                <!-- Nëse keni një version të vogël të fotos, mund të vendosni një <img>. Për këtë shembull përdorim një placeholder -->
                 <img class="dish-thumb" src="images/focaccia_bianca.jpg" alt="Focaccia bianca">
                 <span class="dish-text">Focaccia bianca - 4.00€</span>
                 <button class="see-more">See More</button>
@@ -54,21 +51,138 @@
                 <button class="see-more">See More</button>
               </div>
             </li>
-            <!-- Vazhdoni me të tjera si: Caprese, Prosciutto crudo e melone, etj. -->
-            <li data-img="images/caprese.jpg" data-desc="Caprese: një kombinim i thjeshtë dhe të freskët të domateve, mozzarella-s, dhe borzilokut.">
+            <li data-img="images/caprese.jpg" data-desc="Caprese: domate, mozzarella dhe borzilok për një përzierje klasike.">
               <div class="dish-item">
                 <img class="dish-thumb" src="images/caprese.jpg" alt="Caprese">
                 <span class="dish-text">Caprese - 10€</span>
                 <button class="see-more">See More</button>
               </div>
             </li>
-            <!-- Përgjigjuni formatit për të gjitha pjatat e kategorisë -->
+            <!-- Vazhdoni me elemente të tjera: prosciutto crudo e melone, Zuppa di Cozze, etj. -->
           </ul>
         </div>
-        <!-- Tani shtoni edhe nënseksionet tjera sipas menusë: Primi Piatti, Secondi Pesce, Secondi Carne, etj. (mund ta kopjoni strukturën e sipërme) -->
+        <!-- Primi Piatti -->
+        <div class="sub-section">
+          <h3>Primi Piatti</h3>
+          <ul>
+            <li data-img="images/spaghetti_aglio_olio.jpg" data-desc="Spaghetti aglio, olio e peperoncino - klasike dhe të shijshme.">
+              <div class="dish-item">
+                <img class="dish-thumb" src="images/spaghetti_aglio_olio.jpg" alt="Spaghetti aglio, olio e peperoncino">
+                <span class="dish-text">Spaghetti aglio, olio e peperoncino - 10€</span>
+                <button class="see-more">See More</button>
+              </div>
+            </li>
+            <!-- Shtoni të gjitha elementet nga Primi Piatti sipas menusë tuaj -->
+          </ul>
+        </div>
+        <!-- Secondi Pesce -->
+        <div class="sub-section">
+          <h3>Secondi Pesce</h3>
+          <ul>
+            <li data-img="images/branzino.jpg" data-desc="Branzino alla Griglia - i freskët dhe i pjekur në mënyrë perfekte.">
+              <div class="dish-item">
+                <img class="dish-thumb" src="images/branzino.jpg" alt="Branzino alla Griglia">
+                <span class="dish-text">Branzino alla Griglia - 18€</span>
+                <button class="see-more">See More</button>
+              </div>
+            </li>
+            <!-- Shtoni të gjitha elementet për Secondi Pesce -->
+          </ul>
+        </div>
+        <!-- Secondi Carne -->
+        <div class="sub-section">
+          <h3>Secondi Carne</h3>
+          <ul>
+            <li data-img="images/roast_beef.jpg" data-desc="Roast beef me rucola dhe Grana - i shijshëm dhe i butë.">
+              <div class="dish-item">
+                <img class="dish-thumb" src="images/roast_beef.jpg" alt="Roast beef">
+                <span class="dish-text">Roast beef rucola e Grana - 12€</span>
+                <button class="see-more">See More</button>
+              </div>
+            </li>
+            <!-- Vazhdoni me të gjitha elementet për Secondi Carne -->
+          </ul>
+        </div>
+        <!-- Contorni -->
+        <div class="sub-section">
+          <h3>Contorni</h3>
+          <ul>
+            <li data-img="images/insalata_mista.jpg" data-desc="Insalata Mista - freskët dhe e thjeshtë.">
+              <div class="dish-item">
+                <img class="dish-thumb" src="images/insalata_mista.jpg" alt="Insalata Mista">
+                <span class="dish-text">Insalata Mista - 4€</span>
+                <button class="see-more">See More</button>
+              </div>
+            </li>
+            <!-- Vazhdoni me Patate Fritte, Verdure alla Griglia, etj. -->
+          </ul>
+        </div>
+        <!-- Insalatone -->
+        <div class="sub-section">
+          <h3>Insalatone</h3>
+          <ul>
+            <li data-img="images/caesar_pollo.jpg" data-desc="Caesar di pollo - me përbërës të freskët.">
+              <div class="dish-item">
+                <img class="dish-thumb" src="images/caesar_pollo.jpg" alt="Caesar di pollo">
+                <span class="dish-text">Caesar di pollo - 11€</span>
+                <button class="see-more">See More</button>
+              </div>
+            </li>
+            <!-- Vazhdoni me elementet e tjera -->
+          </ul>
+        </div>
+        <!-- Panini Gourmet -->
+        <div class="sub-section">
+          <h3>Panini Gourmet</h3>
+          <ul>
+            <li data-img="images/club_sandwich_pollo.jpg" data-desc="Club Sandwich Pollo - me përbërës të zgjedhur me kujdes.">
+              <div class="dish-item">
+                <img class="dish-thumb" src="images/club_sandwich_pollo.jpg" alt="Club Sandwich Pollo">
+                <span class="dish-text">Club Sandwich Pollo - 12€</span>
+                <button class="see-more">See More</button>
+              </div>
+            </li>
+            <!-- Vazhdoni me të gjitha pjatat për Panini Gourmet -->
+          </ul>
+        </div>
+        <!-- Pizze -->
+        <div class="sub-section">
+          <h3>Pizze</h3>
+          <ul>
+            <li data-img="images/focaccia_bianca_pizza.jpg" data-desc="Focaccia bianca: një bazë delikate me olive dhe rosmarino.">
+              <div class="dish-item">
+                <img class="dish-thumb" src="images/focaccia_bianca_pizza.jpg" alt="Focaccia bianca Pizze">
+                <span class="dish-text">Focaccia bianca - 4.00€</span>
+                <button class="see-more">See More</button>
+              </div>
+            </li>
+            <li data-img="images/margherita.jpg" data-desc="Margherita: klasik shqiptar, me domate, mozzarella dhe borzilok.">
+              <div class="dish-item">
+                <img class="dish-thumb" src="images/margherita.jpg" alt="Margherita">
+                <span class="dish-text">Margherita - 7.00€</span>
+                <button class="see-more">See More</button>
+              </div>
+            </li>
+            <!-- Shtoni të gjitha pjatat për Pizze, përfshirë: Marinara, Siciliana, Napoli, Diavola, etj. -->
+          </ul>
+        </div>
+        <!-- Panozzi -->
+        <div class="sub-section">
+          <h3>Panozzi</h3>
+          <ul>
+            <li data-img="images/classico.jpg" data-desc="Classico: të thjeshtë, me një shije tradicionale.">
+              <div class="dish-item">
+                <img class="dish-thumb" src="images/classico.jpg" alt="Panozzi Classico">
+                <span class="dish-text">Classico - 8.00€</span>
+                <button class="see-more">See More</button>
+              </div>
+            </li>
+            <!-- Shtoni Rustico, Vegetariano, Legero -->
+          </ul>
+        </div>
       </div>
       
-      <!-- Tab "Dessert" – përfshin "Dessert e Frutta" me të njëjtin stil, por me tekste të rritur -->
+      <!-- TAB "DESSERT" (Dessert e Frutta) -->
       <div id="dessert" class="tab-content">
         <h2>Dessert e Frutta</h2>
         <ul>
@@ -79,39 +193,87 @@
               <button class="see-more">See More</button>
             </div>
           </li>
-          <li data-img="images/tiramisu.jpg" data-desc="Tiramisu: tradicionale, me shije të theksuar të kafesë dhe kakao.">
+          <li data-img="images/semifreddo_affogato.jpg" data-desc="Semifreddo Affogato al caffe: freskët dhe aromatike.">
+            <div class="dish-item">
+              <img class="dish-thumb" src="images/semifreddo_affogato.jpg" alt="Semifreddo Affogato">
+              <span class="dish-text">Semifreddo Affogato al caffe - 5.00€</span>
+              <button class="see-more">See More</button>
+            </div>
+          </li>
+          <li data-img="images/tiramisu.jpg" data-desc="Tiramisu: tradicionale, me shije të theksuar të kafesë e kakao.">
             <div class="dish-item">
               <img class="dish-thumb" src="images/tiramisu.jpg" alt="Tiramisu">
               <span class="dish-text">Tiramisu - 5.00€</span>
               <button class="see-more">See More</button>
             </div>
           </li>
-          <!-- Vazhdoni për të gjitha ndër pjatat tjetër -->
+          <!-- Vazhdoni me të gjitha pjatat e Desserti -->
         </ul>
       </div>
       
-      <!-- Tab "Bevande" – përfshin BEVANDE VINI SFUSI me nënseksione (p.sh. Vini Rossi, Vini Bianchi, etj.) -->
+      <!-- TAB "BEVANDE" (BEVANDE VINI SFUSI + nënseksione) -->
       <div id="bevande" class="tab-content">
         <h2>BEVANDE VINI SFUSI</h2>
         
         <div class="sub-section">
           <h3>Vini Rossi</h3>
           <ul>
-            <li data-img="images/ca_dei_frati.jpg" data-desc="CA DEI FRATI RONCHEDONE: verë e pasur, ideale për mrekullitë e kuqe.">
+            <li data-img="images/ca_dei_frati.jpg" data-desc="CA DEI FRATI RONCHEDONE: i pasur, me aromë e theksuar.">
               <div class="dish-item">
                 <img class="dish-thumb" src="images/ca_dei_frati.jpg" alt="CA DEI FRATI RONCHEDONE">
                 <span class="dish-text">CA DEI FRATI RONCHEDONE - 35€</span>
                 <button class="see-more">See More</button>
               </div>
             </li>
-            <!-- Vazhdoni me të tjera në këtë nënseksion -->
+            <!-- Shtoni të gjitha pjatat për Vini Rossi -->
           </ul>
         </div>
-        <!-- Shtoni edhe nënseksionet: Vini Bianchi, Vini Rosé, Prosecco e Bollicine, me të njëjtën strukturë -->
+        
+        <div class="sub-section">
+          <h3>Vini Bianchi</h3>
+          <ul>
+            <li data-img="images/pinot_bianco.jpg" data-desc="PINOT BIANCO ALOIS LAGEDER: i freskët, elegant.">
+              <div class="dish-item">
+                <img class="dish-thumb" src="images/pinot_bianco.jpg" alt="PINOT BIANCO ALOIS LAGEDER">
+                <span class="dish-text">PINOT BIANCO ALOIS LAGEDER - 28€</span>
+                <button class="see-more">See More</button>
+              </div>
+            </li>
+            <!-- Vazhdoni me elemente për Vini Bianchi -->
+          </ul>
+        </div>
+        
+        <div class="sub-section">
+          <h3>Vini Rosé</h3>
+          <ul>
+            <li data-img="images/toscana_rose.jpg" data-desc="TOSCANA: i butë dhe me nuanca të qarta.">
+              <div class="dish-item">
+                <img class="dish-thumb" src="images/toscana_rose.jpg" alt="TOSCANA Rosè">
+                <span class="dish-text">TOSCANA - 25€</span>
+                <button class="see-more">See More</button>
+              </div>
+            </li>
+            <!-- Vazhdoni me të gjitha pjatat për Vini Rosè -->
+          </ul>
+        </div>
+        
+        <div class="sub-section">
+          <h3>Prosecco e Bollicine</h3>
+          <ul>
+            <li data-img="images/ferrari_maximum.jpg" data-desc="FERRARI MAXIMUM BRUT: i shkëlqyer për rastet festive.">
+              <div class="dish-item">
+                <img class="dish-thumb" src="images/ferrari_maximum.jpg" alt="FERRARI MAXIMUM BRUT">
+                <span class="dish-text">FERRARI MAXIMUM BRUT - 55€</span>
+                <button class="see-more">See More</button>
+              </div>
+            </li>
+            <!-- Vazhdoni me të gjitha pjatat për Prosecco e Bollicine -->
+          </ul>
+        </div>
       </div>
     </div>
-    
-    <!-- Modal për visual search (shfaq foton më të madhe dhe përshkrimin) -->
+
+    <!-- MODAL për visual search -->
     <div id="dish-modal" class="modal">
       <div class="modal-content">
         <span class="modal-close">&times;</span>
@@ -119,31 +281,10 @@
         <div id="modal-description"></div>
       </div>
     </div>
-    
-    <!-- Footer me sfondin e img12 -->
+
+    <!-- FOOTER me sfondin e img12 -->
     <footer class="bg-footer">
       <p>Coperto 2.00€ - &copy; 2025 BarRestourant &amp; Pizzeria Lido Azzurro</p>
     </footer>
   </body>
-</html>
-
-        <h2>About Us</h2>
-        <p>Add information about your business or yourself here.</p>
-    </section>
-
-    <section id="services">
-        <h2>Our Services</h2>
-        <p>List the services you offer.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Add your contact details or a form here.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Erjol. All rights reserved.</p>
-    </footer>
-    <script src="js/script.js"></script>
-</body>
 </html>
