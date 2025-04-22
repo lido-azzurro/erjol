@@ -1,57 +1,239 @@
-/* Reset */
-body, h1, h2, p {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* General Styles */
 body {
-    line-height: 1.6;
-    color: #333;
+  font-family: 'Poppins', sans-serif;
+  background-color: #87CEFA; /* Light Sky Blue – bojqielli e hapur */
+  color: #333;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+/* HEADER – përdorim img1 */
+.bg-header {
+  background-image: url('https://raw.githubusercontent.com/Erjol-0/erjol-0.github.io/main/img1.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+  position: relative;
 }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+.bg-header h1 {
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+.header-info {
+  font-size: 16px;
 }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+/* HERO – përdorim img2 (foto fillestare) */
+.bg-hero {
+  background-image: url('https://raw.githubusercontent.com/Erjol-0/erjol-0.github.io/main/img2.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
 }
 
-.hero {
-    background: #f4f4f4;
-    padding: 2rem;
-    text-align: center;
+.hero-text {
+  font-size: 72px;
+  font-weight: 700;
 }
 
-section {
-    padding: 2rem;
-    margin: 2rem 0;
+/* TABS NAVIGATION */
+.tabs {
+  text-align: center;
+  margin: 20px 0;
+  position: sticky;
+  top: 0;
+  background-color: #87CEFA;
+  z-index: 1000;
+  padding: 10px 0;
 }
 
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+.tabs .tablink {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #7ed957;
+  color: #7ed957;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.tabs .tablink.active,
+.tabs .tablink:hover {
+  background: #7ed957;
+  color: #fff;
+}
+
+/* TAB CONTENT */
+.tab-container {
+  padding: 20px;
+}
+
+.tab-content {
+  display: none;
+  position: relative;
+  padding: 40px 20px;
+  margin-bottom: 40px;
+  background-color: #87CEFA;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* STILI I DISH ITEM (për çdo pjatë) */
+.dish-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dish-thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.dish-text {
+  flex-grow: 1;
+  font-size: inherit;
+}
+
+/* Butoni "See More" */
+.see-more {
+  background-color: #7ed957;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.see-more:hover {
+  background-color: #5cbf3e;
+}
+
+/* Stilimi i listave të përmbajtjes */
+.sub-section {
+  margin-bottom: 30px;
+}
+
+.sub-section h3 {
+  margin-bottom: 10px;
+  font-size: 26px;
+  text-decoration: underline;
+}
+
+.sub-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Për elementet në "Cibo" */
+.sub-section li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.sub-section li:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Për elementet në "Dessert" dhe "Bevande" (rritje e tekstit) */
+#dessert ul li,
+#bevande ul li {
+  font-size: 32px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+#dessert ul li:hover,
+#bevande ul li:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* MODAL (për visual search) */
+.modal {
+  display: none; /* e fshehur fillimisht */
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;  /* për përmbajtje më të madhe se ekran */
+  background-color: rgba(0,0,0,0.8);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border-radius: 4px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+#modal-description {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Butoni për mbylljen e modalit */
+.modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: black;
+}
+
+/* FOOTER – përdorim img12 */
+.bg-footer {
+  background-image: url('https://raw.githubusercontent.com/Erjol-0/erjol-0.github.io/main/img12.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
 }
